@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const connectWithDb = () => {
   mongoose
-    .connect('mongodb+srv://admin:TuAFA3Be1aVnJsNg@cluster0.hyx9ps1.mongodb.net/whatsappdb?retryWrites=true&w=majority', {
+    .connect(process.env.DB_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })

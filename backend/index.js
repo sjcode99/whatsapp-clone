@@ -7,11 +7,11 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const app = express();
+const port = process.env.PORT || 4000;
 
 // connection with db
 connectWithDb();
 
-const port = process.env.PORT || 4000;
 
 // middleware
 app.use(express.json());
