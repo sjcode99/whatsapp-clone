@@ -11,6 +11,8 @@ const app = express();
 // connection with db
 connectWithDb();
 
+const port = process.env.PORT || 4000;
+
 // middleware
 app.use(express.json());
 app.use(cors());
@@ -82,6 +84,6 @@ app.post("/api/v1/messages/new", async (req, res) => {
 });
 
 // listen
-app.listen(process.env.PORT, () => {
-  console.log(`Server is running at PORT ${process.env.PORT}`);
+app.listen(port, () => {
+  console.log(`Server is running at PORT ${port}`);
 });
