@@ -1,5 +1,5 @@
 const express = require("express");
-require("dotenv").config();
+// require("dotenv").config();
 const connectWithDb = require("./config/db");
 const Messages = require("./model/dbMessages");
 const Pusher = require("pusher");
